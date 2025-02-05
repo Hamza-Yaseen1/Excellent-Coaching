@@ -54,7 +54,7 @@ body {
 
 /* about section */
 .introduction {
-  background-image: url('/E-PROJECT/images/about1.jpg');
+  background-image: url('../images/about1.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
