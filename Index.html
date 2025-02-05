@@ -111,7 +111,7 @@
       <p>
           At our core, we are more than just a coaching center—we are a family that thrives on commitment, hard work, and the shared vision of excellence. Join us, and let’s embark on a journey to achieve your dreams together!
       </p>
-      <a href="#contact" class="btn btn-primary">Contact</a>
+      <a href="#contact" class="contact-btn">Contact</a>
   </div>
 </section>
 
@@ -287,7 +287,7 @@
       <section class="faculty-section py-5" id="faculty">
         <div class="container">
           <h2 class="text-center mb-4">Meet Our Faculty</h2>
-          <p class="text-center mb-5">Our experienced and qualified faculty is here to guide you towards success.</p>
+          <p class="text-center mb-5 text-white">Our experienced and qualified faculty is here to guide you towards success.</p>
       
           <!-- Faculty Profiles -->
           <div class="row g-4">
@@ -347,7 +347,7 @@
 
 <section class="contact-us py-5" id="contact">
   <div class="container">
-    <h2 class="text-center mb-4">Contact Us</h2>
+    <h2 class="text-center mb-4 fw-bold">Contact Us</h2>
     <p class="text-center mb-4">We would love to hear from you. Get in touch with us at:</p>
     
     <div class="row">
@@ -380,7 +380,7 @@
             <label for="message" class="form-label">Your Message</label>
             <textarea class="form-control" id="message" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="submit-btn"  onclick="submitButton(this)">Submit</button>
         </form>
       </div>
       
@@ -439,5 +439,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         
     </script>
+    <script>
+      function submitButton(btn) {
+          btn.classList.add("loading"); 
+          btn.disabled = true; 
+
+          setTimeout(() => {
+              btn.classList.remove("loading"); 
+              btn.disabled = false; 
+          }, 2000); 
+      }
+  </script>
   </body>
 </html>

@@ -10,10 +10,11 @@ body {
 }
 
 .navbar-nav .nav-link {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 15px;
+  /* font-weight: 600; */
   text-transform: uppercase;
   margin-right: 15px;
+  
   color: #f8f9fa !important;
   white-space: nowrap; /* Prevent text wrapping */
   transition: color 0.3s ease, font-size 0.3s ease;
@@ -22,7 +23,7 @@ body {
 /* Hover Effect for Navbar Links */
 .navbar-nav .nav-link:hover {
   color: #ffc107 !important; 
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 /* Active Link Style (Clicked link) */
@@ -85,7 +86,68 @@ p {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+/* Contact button styling */
+.contact-btn {
+  display: inline-block;
+  padding: 11px 50px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
 
+.contact-btn:hover {
+  background-color: #0056b3;
+}
+.submit-btn {
+  position: relative;
+  background:darkblue;
+  color: white;
+  border: none;
+  padding: 12px 50px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background: black;
+  box-shadow: 0px 5px 15px rgba(255, 65, 108, 0.4);
+}
+
+/* Disabled state */
+.submit-btn.loading {
+  cursor: not-allowed;
+  color: transparent;
+}
+
+/* Loading Spinner */
+.submit-btn.loading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  from {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .btn {
   display: inline-block;
   background: #ffffff;
